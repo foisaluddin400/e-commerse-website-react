@@ -1,0 +1,37 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  background-color: rgb(249, 249, 249);
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+}
+
+
+.active{
+  border-bottom: 2px solid chocolate;
+  
+  
+}
+li{
+  list-style-type: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin 7s linear infinite; /* Adjust the duration (3s) for slower/faster spin */
+}
+
+
+
