@@ -114,7 +114,7 @@ const Footer = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="outline-none p-2 rounded-md w-[100%] h-[100px] bg-white"
+                  className="outline-none p-2 rounded-md w-[100%] h-[100px] border bg-white"
                   placeholder='Write your message'
                 ></textarea>
                 <div className="flex justify-center ">

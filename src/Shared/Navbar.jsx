@@ -80,13 +80,28 @@ const Navbar = () => {
                       className="drawer-overlay"
                     ></label>
                     <ul className="menu bg-white text-black min-h-full w-80 p-4">
-                    <div className="flex justify-center">
-                    <li><img className=" w-[150px]   rounded-full" src={user?.photoURL} alt="" /></li>
-                    </div>
-                    <div className="text-center text-xl">
-                      {user?.displayName}
-                    </div>
-                      <div className="flex flex-col">
+                    <h1 className="bg-white md:px-5 py-6 shadow-sm">
+                <div className="flex justify-center">
+                  {user && user.photoURL ? (
+                    <img
+                      className="rounded-full w-[100px] border-blue-800 border-2"
+                      src={user.photoURL}
+                      alt=""
+                    />
+                  ) : (
+                    <FaRegUserCircle className="rounded-full w-[100px] h-[100px] text-3xl text-black border-2" />
+                  )}
+                </div>
+                <h1 className="text-center text-xl mt-3">
+                  Name:
+                  {user ? (
+                    user.displayName
+                  ) : (
+                    <Link to="/login">Login</Link>
+                  )}
+                </h1>
+              </h1> <hr />
+                      <div className="flex flex-col mt-4">
                       {menu}
                       </div>
                     </ul>

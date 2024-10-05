@@ -3,6 +3,7 @@ import { AuthContext } from "../Autentication/AuthProvider";
 import { FaHome } from "react-icons/fa";
 import Useadress from "../UseHook/Useadress";
 import UseAxiosSecure from "../UseHook/UseAxiosSecure";
+import { motion } from "framer-motion"; // Import motion from framer-motion
 
 const UserHome = () => {
   const { user } = useContext(AuthContext);
@@ -51,13 +52,18 @@ const UserHome = () => {
   };
 
   return (
-    <div className=" md:shadow-lg p-4 md:ml-4 md:px-11 py-11 mt-2">
-      <div className="">
+    <div className="md:shadow-lg p-4 md:ml-4 md:px-11 py-11 mt-2">
+      <motion.div
+        className=""
+        initial={{ scale: 0.8, opacity: 0 }} // Start from small size and invisible
+        whileInView={{ scale: 1, opacity: 1 }} // Animate to full size and visible
+        transition={{ duration: 0.5 }} // Animation duration
+      >
         <div className="flex md:pt-6 pb-3 md:pr-[250px]">
           <h1 className="md:text-[100px] text-[60px] text-emerald-600">
             <FaHome />
           </h1>
-          <div className="pl-4 mdpt-3">
+          <div className="pl-4 md:pt-3">
             <h1 className="md:text-3xl text-xl font-semibold">Personal Information</h1>
             <p className="md:text-md text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -72,30 +78,35 @@ const UserHome = () => {
             name="name"
             value={inputValues.name}
             onChange={handleChange}
+            placeholder="Name" // Added placeholder for better UX
           />
           <input
             className="bg-white border p-3 rounded-md w-full mt-4"
             name="adress"
             value={inputValues.adress}
             onChange={handleChange}
+            placeholder="Address" // Added placeholder for better UX
           />
           <input
             className="bg-white border p-3 rounded-md w-full mt-4"
             name="city"
             value={inputValues.city}
             onChange={handleChange}
+            placeholder="City" // Added placeholder for better UX
           />
           <input
             className="bg-white border p-3 rounded-md w-full mt-4"
             name="phone"
             value={inputValues.phone}
             onChange={handleChange}
+            placeholder="Phone" // Added placeholder for better UX
           />
           <input
             className="bg-white border p-3 rounded-md w-full mt-4"
             name="country"
             value={inputValues.country}
             onChange={handleChange}
+            placeholder="Country" // Added placeholder for better UX
           />
           <button
             className="bg-red-600 mt-5 text-white p-3"
@@ -104,7 +115,7 @@ const UserHome = () => {
             Update Address
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

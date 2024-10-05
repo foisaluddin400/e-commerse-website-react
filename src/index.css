@@ -33,5 +33,18 @@ li{
   animation: spin 7s linear infinite; /* Adjust the duration (3s) for slower/faster spin */
 }
 
+.custom-file-input {
+  display: inline-block;
+  background-color: rgb(234, 234, 234); /* আপনার পছন্দ অনুযায়ী রঙ পরিবর্তন করুন */
+  padding: 10px; /* প্রয়োজন অনুযায়ী প্যাডিং যোগ করুন */
+  color: rgb(0, 0, 0); /* টেক্সটের রঙ */
+  border-radius: 5px; /* কোণার আকৃতি */
+  cursor: pointer; /* কার্সরের অবস্থান */
+}
+
+input[type="file"] {
+  display: none; /* ডিফল্ট ইনপুট ফাইল скрыть */
+}
+
 
 
