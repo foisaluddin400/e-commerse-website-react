@@ -76,7 +76,7 @@ export const router = createBrowserRouter([
         element: <ProductDetails></ProductDetails>,
         loader: async ({ params }) => {
           // Fetch the specific product by its MongoDB _id from the backend API
-          const res = await fetch(`https://ecommerce-website-server-side2-fy6lu9yjk-foisal-uddins-projects.vercel.app/menu/${params.id}`);
+          const res = await fetch(`https://ecommerce-website-server-side2.vercel.app/menu/${params.id}`);
           if (!res.ok) {
             throw new Error('Failed to fetch product details');
           }
@@ -138,7 +138,7 @@ export const router = createBrowserRouter([
           {
             path: "/updateitems/:id",
             element: <AddminMenuUpdate></AddminMenuUpdate>,
-            loader: ({params}) => fetch(`https://ecommerce-website-server-side2-fy6lu9yjk-foisal-uddins-projects.vercel.app/menu/${params.id}`)
+            loader: ({params}) => fetch(`https://ecommerce-website-server-side2.vercel.app/menu/${params.id}`)
           },
         ]
       },

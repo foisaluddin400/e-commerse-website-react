@@ -30,7 +30,7 @@ const Footer = () => {
     }
 
     try {
-      const response = await fetch("https://ecommerce-website-server-side2-fy6lu9yjk-foisal-uddins-projects.vercel.app/contact", {
+      const response = await fetch("https://ecommerce-website-server-side2.vercel.app/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
