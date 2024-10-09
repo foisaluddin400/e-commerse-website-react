@@ -39,7 +39,7 @@ const UserHome = () => {
   };
 
   const handleUpdate = () => {
-    const addressId = adress[0]._id; // Get the ID of the existing address
+    const addressId = adress[0]._id; 
     axiosSecure
       .put(`/adress/${addressId}`, inputValues)
       .then((res) => {
@@ -55,9 +55,9 @@ const UserHome = () => {
     <div className="md:shadow-lg p-4 md:ml-4 md:px-11 py-11 mt-2">
       <motion.div
         className=""
-        initial={{ scale: 0.8, opacity: 0 }} // Start from small size and invisible
-        whileInView={{ scale: 1, opacity: 1 }} // Animate to full size and visible
-        transition={{ duration: 0.5 }} // Animation duration
+        initial={{ scale: 0.8, opacity: 0 }} 
+        whileInView={{ scale: 1, opacity: 1 }} 
+        transition={{ duration: 0.5 }} 
       >
         <div className="flex md:pt-6 pb-3 md:pr-[250px]">
           <h1 className="md:text-[100px] text-[60px] text-emerald-600">
@@ -78,35 +78,35 @@ const UserHome = () => {
             name="name"
             value={inputValues.name}
             onChange={handleChange}
-            placeholder="Name" // Added placeholder for better UX
+            placeholder="Name" 
           />
           <input
             className="bg-white border p-3 rounded-md w-full mt-4"
             name="adress"
             value={inputValues.adress}
             onChange={handleChange}
-            placeholder="Address" // Added placeholder for better UX
+            placeholder="Address"
           />
           <input
             className="bg-white border p-3 rounded-md w-full mt-4"
             name="city"
             value={inputValues.city}
             onChange={handleChange}
-            placeholder="City" // Added placeholder for better UX
+            placeholder="City" 
           />
           <input
             className="bg-white border p-3 rounded-md w-full mt-4"
             name="phone"
             value={inputValues.phone}
             onChange={handleChange}
-            placeholder="Phone" // Added placeholder for better UX
+            placeholder="Phone" 
           />
           <input
             className="bg-white border p-3 rounded-md w-full mt-4"
             name="country"
             value={inputValues.country}
             onChange={handleChange}
-            placeholder="Country" // Added placeholder for better UX
+            placeholder="Country" 
           />
           <button
             className="bg-red-600 mt-5 text-white p-3"

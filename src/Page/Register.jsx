@@ -13,7 +13,6 @@ const Register = () => {
     const [errorMessage, setErrorMessage] = useState(""); 
     const axiosPublic = UsePublic();
     const navigate = useNavigate();
-
     const onSubmit = async (data) => {
         setErrorMessage(""); 
         try {

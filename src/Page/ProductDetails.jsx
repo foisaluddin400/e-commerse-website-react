@@ -56,13 +56,13 @@ const ProductDetails = () => {
 
   return (
     <div className="mt-11 mb-[80px]">
-      <div className="flex gap-5">
+      <div className="md:flex gap-5">
         <div>
-          <div className="bg-gray-200 w-[600px] h-[600px] flex justify-center items-center">
-            <img className="w-[300px]" src={product.image} alt={product.name} />
+          <div className="bg-gray-200 md:w-[600px] md:h-[600px] flex justify-center items-center">
+            <img className="md:w-[300px]" src={product.image} alt={product.name} />
           </div>
         </div>
-        <div className="mt-6">
+        <div className="mt-6 m-3">
           <div className="text-2xl font-semibold pb-3">{product.name}</div>
           <Rating size="small" name="read-only" value={product.rating} readOnly />
           <div className="pt-3">{product.recipe}</div>

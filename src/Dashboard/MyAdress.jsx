@@ -16,7 +16,7 @@ const MyAdress = () => {
 
   useEffect(() => {
     if (hasAddress) {
-      const userAddress = adress[0]; // Assuming the user has only one address
+      const userAddress = adress[0]; 
       setValue("name", userAddress.name || "");
       setValue("adress", userAddress.adress || "");
       setValue("city", userAddress.city || "");
@@ -27,7 +27,7 @@ const MyAdress = () => {
 
   const onSubmit = (data) => {
     if (!user) {
-      alert("আপনার লগইন করতে হবে।");
+      alert("please Log In");
       return;
     }
 
@@ -104,7 +104,7 @@ const MyAdress = () => {
           disabled={hasAddress}
         />
         
-        <input className="bg-red-600 mt-5 text-white px-6 py-3" type="submit" disabled={hasAddress} /> {/* Disable submit button if address exists */}
+        <input className="bg-red-600 mt-5 text-white px-6 py-3" type="submit" disabled={hasAddress} /> 
       </form>
 
       </div>
